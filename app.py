@@ -843,19 +843,6 @@ elif menu == "📉 Dashboard":
 
     st.pyplot(fig5)
 
-if st.button("Delete Invalid Record"):
-
-    conn.execute("""
-    DELETE FROM food_listings
-    WHERE Food_Name = 'Chilen Biryani'
-      AND Provider_ID IS NULL
-    """)
-
-    conn.commit()
-
-    st.success("Record Deleted Successfully")
-
-
 elif menu == "⚙️ CRUD Operations":
 
     st.header("⚙️ CRUD Operations")
